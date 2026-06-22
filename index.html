@@ -125,21 +125,25 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: .1rem;
+      gap: .15rem;
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.08rem;
-      line-height: 1.05;
+      font-size: 1.32rem;
+      line-height: 1.02;
       text-decoration: none;
     }
     .brand-name { display: block; }
     .brand-sub {
       font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: .64rem;
-      letter-spacing: .14em;
+      font-size: .72rem;
+      letter-spacing: .15em;
       text-transform: uppercase;
       color: var(--brass-deep);
+    }
+    @media (max-width: 720px) {
+      .brand { font-size: 1.12rem; }
+      .brand-sub { font-size: .6rem; letter-spacing: .12em; }
     }
 
     .brand .mark {
@@ -397,6 +401,17 @@
 
     .inline-link:hover {
       border-bottom-color: var(--plum);
+    }
+
+    .inline-link-light {
+      color: var(--brass);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(200, 147, 46, 0.45);
+      transition: border-color .15s ease;
+    }
+
+    .inline-link-light:hover {
+      border-bottom-color: var(--brass);
     }
 
     /* ---- Video ---- */
@@ -660,8 +675,9 @@
     <div class="wrap" style="text-align:center;">
       <div class="section-tag">Remembering Nathan</div>
       <h2 class="section-title">Watch</h2>
-      <p class="lead-text">A glimpse into the educational work Nathan did with Oompah Brass, bringing music to children
-        and young people.</p>
+      <p class="lead-text">A glimpse into the educational work Nathan did with
+        <a href="https://www.oompahbrass.com" target="_blank" rel="noopener" class="inline-link-light">Oompah Brass</a>,
+        bringing music to children and young people.</p>
       <div class="video-frame">
         <iframe src="https://www.youtube-nocookie.com/embed/glbf8MuvkQY" title="Remembering Nathan Gash"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
