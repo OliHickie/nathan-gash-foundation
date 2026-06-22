@@ -123,12 +123,23 @@
 
     .brand {
       display: flex;
-      align-items: center;
-      gap: .7rem;
+      flex-direction: column;
+      justify-content: center;
+      gap: .1rem;
       font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: 1.08rem;
+      line-height: 1.05;
       text-decoration: none;
+    }
+    .brand-name { display: block; }
+    .brand-sub {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: .64rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brass-deep);
     }
 
     .brand .mark {
@@ -561,7 +572,8 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top">
-        Nathan Gash Foundation
+        <span class="brand-name">Nathan Gash</span>
+        <span class="brand-sub">Music Education Foundation</span>
       </a>
       <nav class="nav-links">
         <a class="text-link" href="#story">Nathan's Story</a>
