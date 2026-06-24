@@ -13,6 +13,8 @@
   <meta property="og:description"
     content="Continuing Nathan's legacy — helping young musicians access music lessons and courses." />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#e6007e" />
+  <link rel="icon" type="image/png" href="nathan-gash-music-education-foundation.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,16 +24,16 @@
 
   <style>
     :root {
-      --ink: #1c2438;
-      --ink-soft: #4a5268;
-      --paper: #fbf7f0;
-      --paper-2: #f3ecdf;
-      --brass: #c8932e;
-      --brass-deep: #a5761b;
-      --plum: #6c2b4d;
-      --plum-deep: #4d1d37;
-      --line: rgba(28, 36, 56, 0.12);
-      --shadow: 0 18px 50px rgba(28, 36, 56, 0.14);
+      --ink: #18141a;
+      --ink-soft: #565059;
+      --paper: #fbf9fa;
+      --paper-2: #f5eef1;
+      --magenta: #e6007e;
+      --magenta-deep: #c00068;
+      --berry: #7a0046;
+      --berry-deep: #3d0024;
+      --line: rgba(24, 20, 26, 0.12);
+      --shadow: 0 18px 50px rgba(24, 20, 26, 0.14);
       --radius: 18px;
     }
 
@@ -84,14 +86,14 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--brass), var(--brass-deep));
+      background: linear-gradient(135deg, var(--magenta), var(--magenta-deep));
       color: #fff;
-      box-shadow: 0 10px 26px rgba(165, 118, 27, 0.42);
+      box-shadow: 0 10px 26px rgba(230, 0, 126, 0.42);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(165, 118, 27, 0.5);
+      box-shadow: 0 14px 32px rgba(230, 0, 126, 0.5);
     }
 
     .btn-ghost {
@@ -109,7 +111,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(251, 247, 240, 0.82);
+      background: rgba(251, 249, 250, 0.85);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -118,32 +120,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: .9rem 0;
+      padding: .5rem 0;
     }
 
     .brand {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: .15rem;
+      align-items: center;
+      gap: .6rem;
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.32rem;
-      line-height: 1.02;
+      font-size: 1.1rem;
+      line-height: 1.1;
       text-decoration: none;
     }
-    .brand-name { display: block; }
-    .brand-sub {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: .72rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--brass-deep);
+    .brand-logo {
+      display: block;
+      height: 80px;
+      width: auto;
     }
     @media (max-width: 720px) {
-      .brand { font-size: 1.12rem; }
-      .brand-sub { font-size: .6rem; letter-spacing: .12em; }
+      .brand-logo { height: 40px; }
     }
 
     .brand .mark {
@@ -152,7 +148,7 @@
       border-radius: 50%;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--brass), var(--plum));
+      background: linear-gradient(135deg, var(--magenta), var(--berry));
       color: #fff;
       font-size: 1.2rem;
     }
@@ -195,6 +191,7 @@
       color: #fff;
       background: var(--ink);
       overflow: hidden;
+      padding: 0;
     }
 
     .hero-photo {
@@ -206,30 +203,34 @@
       object-position: center 30%;
       transform: translateX(10%);
       z-index: 0;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 24%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 24%);
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(100deg, var(--plum-deep) 28%, rgba(77, 29, 55, 0.78) 48%, rgba(28, 36, 56, 0.35) 72%, rgba(28, 36, 56, 0.15));
+      background: linear-gradient(100deg, rgba(24, 20, 26, 0.94) 24%, rgba(24, 20, 26, 0.72) 48%, rgba(24, 20, 26, 0.3) 72%, rgba(24, 20, 26, 0.04));
     }
 
     @media (max-width: 720px) {
       .hero-photo {
         transform: none;
         object-position: 62% 22%;
+        -webkit-mask-image: none;
+        mask-image: none;
       }
 
       .hero-overlay {
-        background: linear-gradient(180deg, rgba(77, 29, 55, 0.72) 0%, rgba(54, 28, 48, 0.74) 45%, rgba(28, 36, 56, 0.92) 100%);
+        background: linear-gradient(180deg, rgba(24, 20, 26, 0.7) 0%, rgba(24, 20, 26, 0.55) 45%, rgba(24, 20, 26, 0.42) 100%);
       }
     }
 
     .hero-inner {
       position: relative;
       z-index: 2;
-      padding: 5.5rem 0 5rem;
+      padding: 3.5rem 0 3.25rem;
     }
 
     @media (max-width: 720px) {
@@ -254,9 +255,9 @@
       letter-spacing: .18em;
       font-size: .78rem;
       font-weight: 600;
-      color: var(--brass);
-      background: rgba(200, 147, 46, 0.12);
-      border: 1px solid rgba(200, 147, 46, 0.4);
+      color: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       padding: .4rem .9rem;
       border-radius: 999px;
     }
@@ -269,7 +270,7 @@
     }
 
     .hero h1 span {
-      color: var(--brass);
+      color: var(--magenta);
     }
 
     .hero p.lead {
@@ -295,7 +296,7 @@
       letter-spacing: .16em;
       font-size: .78rem;
       font-weight: 600;
-      color: var(--brass-deep);
+      color: var(--magenta-deep);
       margin-bottom: .8rem;
     }
 
@@ -337,7 +338,7 @@
     .portrait {
       aspect-ratio: 4 / 5;
       border-radius: var(--radius);
-      background: linear-gradient(160deg, var(--plum), var(--ink));
+      background: linear-gradient(160deg, var(--berry), var(--ink));
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
@@ -377,13 +378,13 @@
 
     .portrait .dates {
       font-size: .85rem;
-      color: var(--brass);
+      color: var(--magenta);
       margin-top: .6rem;
       letter-spacing: .04em;
     }
 
     .quote {
-      border-left: 3px solid var(--brass);
+      border-left: 3px solid var(--magenta);
       padding-left: 1.2rem;
       margin: 1.8rem 0 0;
       font-family: 'Fraunces', serif;
@@ -393,25 +394,25 @@
     }
 
     .inline-link {
-      color: var(--plum);
+      color: var(--berry);
       text-decoration: none;
-      border-bottom: 1px solid rgba(108, 43, 77, 0.35);
+      border-bottom: 1px solid rgba(230, 0, 126, 0.35);
       transition: border-color .15s ease;
     }
 
     .inline-link:hover {
-      border-bottom-color: var(--plum);
+      border-bottom-color: var(--berry);
     }
 
     .inline-link-light {
-      color: var(--brass);
+      color: var(--magenta);
       text-decoration: none;
-      border-bottom: 1px solid rgba(200, 147, 46, 0.45);
+      border-bottom: 1px solid rgba(230, 0, 126, 0.45);
       transition: border-color .15s ease;
     }
 
     .inline-link-light:hover {
-      border-bottom-color: var(--brass);
+      border-bottom-color: var(--magenta);
     }
 
     /* ---- Video ---- */
@@ -420,7 +421,7 @@
     }
 
     .video-wrap .section-tag {
-      color: var(--brass);
+      color: var(--magenta);
     }
 
     .video-wrap .section-title {
@@ -471,7 +472,7 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 2rem 1.8rem;
-      box-shadow: 0 8px 24px rgba(28, 36, 56, 0.05);
+      box-shadow: 0 8px 24px rgba(24, 20, 26, 0.05);
       transition: transform .18s ease, box-shadow .18s ease;
     }
 
@@ -501,7 +502,7 @@
     .donate {
       text-align: center;
       background:
-        radial-gradient(100% 140% at 50% 0%, rgba(200, 147, 46, 0.25), transparent 60%),
+        radial-gradient(100% 140% at 50% 0%, rgba(230, 0, 126, 0.25), transparent 60%),
         var(--paper-2);
     }
 
@@ -523,9 +524,9 @@
       align-items: center;
       gap: .5rem;
       margin: 0 auto 1.8rem;
-      background: rgba(108, 43, 77, 0.08);
-      border: 1px solid rgba(108, 43, 77, 0.25);
-      color: var(--plum);
+      background: rgba(230, 0, 126, 0.08);
+      border: 1px solid rgba(230, 0, 126, 0.25);
+      color: var(--berry);
       font-weight: 600;
       font-size: .9rem;
       padding: .45rem 1rem;
@@ -556,7 +557,7 @@
     }
 
     footer a {
-      color: var(--brass);
+      color: var(--paper);
       text-decoration: none;
     }
 
@@ -587,8 +588,8 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top">
-        <span class="brand-name">Nathan Gash</span>
-        <span class="brand-sub">Music Education Foundation</span>
+        <img class="brand-logo" src="nathan-gash-music-education-foundation.png"
+          alt="Nathan Gash Music Education Foundation" width="1096" height="452" />
       </a>
       <nav class="nav-links">
         <a class="text-link" href="#story">Nathan's Story</a>
@@ -602,7 +603,7 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <img class="hero-photo" src="nathan-WF.jpg" alt="" aria-hidden="true" />
+    <img class="hero-photo" src="nathan-gash-conducting.jpg" alt="" aria-hidden="true" />
     <div class="hero-overlay"></div>
     <div class="wrap hero-inner">
       <span class="eyebrow">In memory of Nathan Gash · 1981 – 2024</span>
@@ -661,7 +662,7 @@
         </blockquote>
       </div>
       <figure class="portrait">
-        <img src="nathan.jpg" alt="Nathan Gash playing the tuba in a bright pink suit" />
+        <img src="nathan-gash-tuba.png" alt="Nathan Gash playing the tuba in a bright pink suit" />
         <figcaption class="portrait-caption">
           <div class="note">Nathan Gash</div>
           <div class="dates">1981 – 2024</div>
@@ -722,7 +723,7 @@
   <!-- DONATE -->
   <section class="donate" id="donate">
     <div class="wrap">
-      <div class="section-tag" style="color:var(--brass-deep);">Get involved</div>
+      <div class="section-tag" style="color:var(--magenta-deep);">Get involved</div>
       <h2>Help us continue Nathan's legacy.</h2>
       <p>
         Your gift helps a young musician access the lessons and courses that meant
